@@ -1,0 +1,9 @@
+.header {
+    position: fixed;
+    background-color: antiquewhite;
+    min-height: 3rem;
+    width: 100%;
+    top: 0rem;
+    text-align: right;
+  }
+
