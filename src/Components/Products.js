@@ -28,7 +28,9 @@ const Products = (props) => {
         </div>
       );
     });
-    return myList;
+    if (myList.length === 0)
+      return <div className="carts-list empty-cart">No items to display</div>;
+    return <div className="products-list">{myList}</div>;
   };
 
   const handleChecked = () => {
@@ -49,7 +51,7 @@ const Products = (props) => {
         handleChange={props.handleChange}
         handleSearchClick={props.handleSearchClick}
       />
-      <div className="products-list">{renderList()}</div>
+      {renderList()}
       <button className="cart-button" onClick={handleChecked}>
         Add to cart &rarr;
       </button>
