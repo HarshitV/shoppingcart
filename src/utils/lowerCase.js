@@ -1,5 +1,5 @@
 const lowerCase = (str) => {
-    return str.toLowerCase();
-}
+  return str.toLowerCase();
+};
 
 export default lowerCase;

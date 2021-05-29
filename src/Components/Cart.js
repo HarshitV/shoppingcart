@@ -11,7 +11,7 @@ const Cart = (props) => {
       for (let i = 0; i < props.productsList.length; i++) {
         if (id === props.productsList[i].id.toString())
           myList.push(
-            <div key = {++cartId} className="card">
+            <div key={++cartId} className="card">
               <div style={{ marginLeft: "8px" }}>
                 {props.productsList[i].name}
               </div>
@@ -35,7 +35,10 @@ const Cart = (props) => {
     let initialCart = localCart ? localCart : [];
     const myList = findCartItems(props.cart);
     setCartList((prev) => [...prev, ...myList]);
-    localStorage.setItem("cartItems", JSON.stringify([...initialCart, ...props.cart]));
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify([...initialCart, ...props.cart])
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.cart]);
 
@@ -58,7 +61,7 @@ const Cart = (props) => {
       </div>
       {renderCartList()}
       <button className="checkout-button" onClick={checkout}>
-        Checkout --&gt;
+        Checkout &rarr;
       </button>
     </div>
   );

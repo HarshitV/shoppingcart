@@ -3,7 +3,6 @@ import updateButtonColors from "../utils/updateButtonColors";
 import "./Header.css";
 
 function Header() {
-
   useEffect(() => {
     const initialColor = localStorage.getItem("theme");
     if (initialColor) {

@@ -51,7 +51,7 @@ const Products = (props) => {
       />
       <div className="products-list">{renderList()}</div>
       <button className="cart-button" onClick={handleChecked}>
-        Add to cart --&gt;
+        Add to cart &rarr;
       </button>
     </div>
   );
