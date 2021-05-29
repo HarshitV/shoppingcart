@@ -13,10 +13,12 @@ function Header() {
 
   return (
     <div className="header" onChange={selectColor}>
+    <div style = {{marginLeft: "auto", marginRight: "2rem"}}>
       <input type="radio" name="color" value="blue" defaultChecked />
       blue
       <input type="radio" name="color" value="red" />
       red
+      </div>
     </div>
   );
 }
