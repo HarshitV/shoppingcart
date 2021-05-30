@@ -1,11 +1,10 @@
 .header {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    background-color: antiquewhite;
-    min-height: 3rem;
-    width: 100%;
-    padding-right: 3rem;
-    top: 0rem;
-  }
-
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+  min-height: 3rem;
+  width: 100%;
+  padding-right: 3rem;
+  top: 0rem;
+}

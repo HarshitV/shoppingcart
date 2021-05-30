@@ -21,8 +21,8 @@ function App() {
     if (inputVal === "") setProductsList(json);
     else {
       const filteredList = {};
-      for(let key in json) {
-        if(lowerCase(json[key]).indexOf(lowerCase(inputVal)) !== -1)
+      for (let key in json) {
+        if (lowerCase(json[key]).indexOf(lowerCase(inputVal)) !== -1)
           filteredList[key] = json[key];
       }
       setProductsList(filteredList);

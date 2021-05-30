@@ -15,7 +15,7 @@ const Products = (props) => {
 
   const renderList = () => {
     const myList = [];
-    for(let key in props.productsList) {
+    for (let key in props.productsList) {
       myList.push(
         <div key={key} className="card">
           <input

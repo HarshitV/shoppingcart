@@ -16,7 +16,7 @@ const Cart = (props) => {
             </div>
           </div>
         );
-      });
+    });
     return myList;
   };
 
