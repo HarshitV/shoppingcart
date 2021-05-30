@@ -20,9 +20,11 @@ function App() {
   const handleSearchClick = () => {
     if (inputVal === "") setProductsList(json);
     else {
-      const filteredList = json.filter(
-        (item) => lowerCase(item.name).indexOf(lowerCase(inputVal)) !== -1
-      );
+      const filteredList = {};
+      for(let key in json) {
+        if(lowerCase(json[key]).indexOf(lowerCase(inputVal)) !== -1)
+          filteredList[key] = json[key];
+      }
       setProductsList(filteredList);
     }
   };

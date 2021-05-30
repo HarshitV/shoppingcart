@@ -15,19 +15,19 @@ const Products = (props) => {
 
   const renderList = () => {
     const myList = [];
-    props.productsList.forEach((product) => {
+    for(let key in props.productsList) {
       myList.push(
-        <div key={product.id} className="card">
+        <div key={key} className="card">
           <input
             name="itemCheckbox"
             type="checkbox"
-            value={product.id}
+            value={key}
             onChange={handleInputChange}
           />
-          <div style={{ marginLeft: "8px" }}>{product.name}</div>
+          <div style={{ marginLeft: "8px" }}>{props.productsList[key]}</div>
         </div>
       );
-    });
+    }
     if (myList.length === 0)
       return <div className="carts-list empty-cart">No items to display</div>;
     return <div className="products-list">{myList}</div>;

@@ -8,17 +8,15 @@ const Cart = (props) => {
   const findCartItems = (cart) => {
     const myList = [];
     cart.forEach((id) => {
-      for (let i = 0; i < props.productsList.length; i++) {
-        if (id === props.productsList[i].id.toString())
-          myList.push(
-            <div key={++cartId} className="card">
-              <div style={{ marginLeft: "8px" }}>
-                {props.productsList[i].name}
-              </div>
+      if (Number(id) in props.productsList)
+        myList.push(
+          <div key={++cartId} className="card">
+            <div style={{ marginLeft: "8px" }}>
+              {props.productsList[Number(id)]}
             </div>
-          );
-      }
-    });
+          </div>
+        );
+      });
     return myList;
   };
 
